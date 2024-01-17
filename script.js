@@ -16,13 +16,6 @@ function Fibonacci(){
             resultado.innerHTML = "No hay posiciones negativas ni posición cero, intenta con otro numero";
             resultado.style.color = "red"; 
             
-            // Imprimimos los primeros 3 valores del array dependiendo del caso
-        } else if (entrada == 1){
-            resultado.innerHTML ="Resultado: " + listaInicial[0];
-        } else if (entrada == 2){
-            resultado.innerHTML ="Resultado: " + listaInicial[2] + "," + listaInicial[1];
-        } else if (entrada == 3){
-            resultado.innerHTML ="Resultado: " + listaInicial[0] + "," + listaInicial[1] + "," + listaInicial[2];
         } else {
 
             // Si la posicion elegida es mayor que 3, evaluamos su posición en Fibonacci
@@ -37,8 +30,13 @@ function Fibonacci(){
             }
 
             // Imprimimos resultado
+
+            let rango = listaInicial.slice(0,entrada);
+            console.log(rango)
             resultado.style.color = "black";
-            resultado.innerHTML = "Resultado: " + listaInicial;
+            resultado.innerHTML = "Resultado: " + rango;
+
+
 
             // let nuevaLista = document.createElement("li");
             // let adios = document.createTextNode("adios")
@@ -51,7 +49,6 @@ function Fibonacci(){
         resultado.innerHTML = "Ingrese un número válido";
         resultado.style.color = "red";
     }
-    // let rango = listaInicial.slice(0,entrada);
-    // console.log(rango)
+    
 }
 
